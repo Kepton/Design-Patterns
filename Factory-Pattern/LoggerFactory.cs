@@ -23,4 +23,13 @@ namespace Factory_Pattern
             return item;
         }
     }
+
+    public class OtherLoggerFactory : LoggerFacotry
+    {
+        public override ILogger createLogger()
+        {
+            ILogger item = new DataBaseLogger();
+            return item;
+        }
+    }
 }
